@@ -1,0 +1,22 @@
+[build]
+  publish = "src"
+  edge = "netlify/edge"
+  node_bundler = "esbuild"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[edge]]
+  function = "inject-bot"
+  path = "/*"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, X-Nova-Session"
+    X-Frame-Options = "DENY"
+    Cache-Control = "no-store"
