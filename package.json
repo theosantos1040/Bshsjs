@@ -1,0 +1,9 @@
+{
+  "name": "nova-arsenal",
+  "version": "10.1.0",
+  "description": "NOVA Arsenal v10.1 — Fixed",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  }
+}
